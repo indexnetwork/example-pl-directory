@@ -1,6 +1,6 @@
 import 'dotenv/config'
 import fs from 'fs';
-import { Wallet } from '@ethersproject/wallet'
+import { Wallet, JsonRpcProvider } from 'ethers';
 import IndexClient from "@indexnetwork/sdk";
 import { getAllTeams } from './utils/getAllTeams.js';
 import { createTeam } from './utils/getComposeClient.js';
@@ -20,16 +20,16 @@ const loadTeams = async () => {
 
 const go = async () => {
   try {
+    console.log('Starting process...');
 
-    const wallet = Wallet.createRandom(process.env.WALLET_PRIVATE_KEY)
-
-    const teams = await loadTeams(); // Load teams from cache or fetch new ones
-
-    let createdTeams = [];
-    for (const t of teams) {
-      let createdTeam = await createTeam(wallet, t);
-      createdTeams.push(createdTeam)
+    const walletPrivateKey = process.env.WALLET_PRIVATE_KEY;
+    const rpcEndpoint = process.env.LIT_RPC_ENDPOINT;
+    if (!walletPrivateKey || !rpcEndpoint) {
+      throw new Error('Environment variables for wallet or RPC endpoint are missing.');
     }
+
+    const wallet = new Wallet(walletPrivateKey, new JsonRpcProvider(rpcEndpoint));
+    console.log('Wallet initialized.');
 
     const indexClient = new IndexClient({
       privateKey: wallet.privateKey,
@@ -37,24 +37,52 @@ const go = async () => {
       network: "ethereum",
     });
 
+    console.log('Authenticating index client...');
     await indexClient.authenticate();
+    console.log('Index client authenticated.');
 
-    const indexId = await indexClient.createIndex({
-      title: "PL Ecosystem Teams",
-    });
+    console.log('Creating index...');
+    const indexId = await indexClient.createIndex("PL Ecosystem Teams");
+    console.log(`Index created with ID: ${indexId}`);
 
-    for (const t of createdTeams) {
-      await indexClient.addIndexItem(indexId, t)
+    console.log('Loading teams...');
+    const teams = await loadTeams(); // This function needs to be defined elsewhere
+    console.log(`Loaded ${teams.length} teams.`);
+
+    let createdTeams = [];
+    for (const t of teams) {
+      let createdTeam;
+      try {
+        createdTeam = await createTeam(wallet, t); // Assuming createTeam is defined elsewhere
+        console.log(`Team created: ${t.name}`);
+      } catch (err) {
+        console.error('Error creating team:', err);
+        continue; // Skip this team and proceed with the next one
+      }
+      createdTeams.push(createdTeam);
     }
 
+    console.log('Adding teams to index...');
+    for (const t of createdTeams) {
+      try {
+        await indexClient.addIndexItem(indexId, t);
+        console.log(`Team added to index: ${t.id}`);
+      } catch (err) {
+        console.error('Error adding team to index:', err);
+      }
+    }
+
+    console.log('Querying index...');
     const queryResponse = await indexClient.query({
       query: "Which team is building a decentralized semantic index?",
       indexes: [indexId],
     });
+    console.log('Query response:', queryResponse);
 
   } catch (error) {
-    console.error('Exception:', error);
+    console.error('Exception in process:', error);
   }
 };
+
 
 go()

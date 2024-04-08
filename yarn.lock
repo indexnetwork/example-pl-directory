@@ -1130,9 +1130,9 @@
     tslib "^2.5.0"
 
 "@graphql-tools/executor@^1.2.1":
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/@graphql-tools/executor/-/executor-1.2.5.tgz#2457434ab5bf549953e30a0e7c2d18e2bf053a18"
-  integrity sha512-s7sW4K3BUNsk9sjq+vNicwb9KwcR3G55uS/CI8KZQ4x0ZdeYMIwpeU9MVeORCCpHuQyTaV+/VnO0hFrS/ygzsg==
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/@graphql-tools/executor/-/executor-1.2.6.tgz#71caa7c52108e4744bfa5ffdc958126bb4b48ff2"
+  integrity sha512-+1kjfqzM5T2R+dCw7F4vdJ3CqG+fY/LYJyhNiWEFtq0ToLwYzR/KKyD8YuzTirEjSxWTVlcBh7endkx5n5F6ew==
   dependencies:
     "@graphql-tools/utils" "^10.1.1"
     "@graphql-typed-document-node/core" "3.2.0"
@@ -1159,9 +1159,9 @@
     value-or-promise "^1.0.12"
 
 "@graphql-tools/stitch@^9.0.5":
-  version "9.0.5"
-  resolved "https://registry.yarnpkg.com/@graphql-tools/stitch/-/stitch-9.0.5.tgz#5764cb37989458d7f0056d4797fcebb001e1b8e3"
-  integrity sha512-sgeeuOv76HqATbYcRBDLr2Y/rN1ojRFrDg2t+IBn6u7ZBQO9ujks7mVplhd9J7d7IyMrsqh581K9oclPqKanYg==
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/@graphql-tools/stitch/-/stitch-9.1.0.tgz#fa65d8ae85b21b0c80992d484a0db0cc1bfa64c0"
+  integrity sha512-EEZn2BcvuOX+7DOSROv+3Td0SvuC/YnJ5+ua2xjhThOU7q8QFqL+JxgT4BOdI829ZR+rQqaX6do3VEY4UNo1Yg==
   dependencies:
     "@graphql-tools/batch-delegate" "^9.0.1"
     "@graphql-tools/delegate" "^10.0.4"
@@ -1199,13 +1199,13 @@
   resolved "https://registry.yarnpkg.com/@graphql-typed-document-node/core/-/core-3.2.0.tgz#5f3d96ec6b2354ad6d8a28bf216a1d97b5426861"
   integrity sha512-mB9oAsNCm9aM3/SOv4YtBMqZbYj10R7dkq8byBqxGY/ncFwhf2oQzMV+LCRlWoDSEBJ3COiR1yeDvMtsoOsuFQ==
 
-"@indexnetwork/sdk@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@indexnetwork/sdk/-/sdk-0.0.3.tgz#77615dcff2afff45682855a7602a3232189939fa"
-  integrity sha512-dHgGuL571sIBvKCmOqAM+RzNLd2BmS8I1EXIJTL3ScPVcVSHnhfc3RgAMXIzAOvgOqSkeCOADxZnNFj9h30chg==
+"@indexnetwork/sdk@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@indexnetwork/sdk/-/sdk-0.0.5.tgz#60b4be0755bbeafdbe6ad35c2b24e9c37293804d"
+  integrity sha512-cK0tHy2rGvjhqj5tuTzR4wuZiTG6SbftWJlbUUZ87DEZrcV36hhWMkzpQYkgAhI3rpV8/O25z5a+TqlaabdzzA==
   dependencies:
     "@didtools/cacao" "^3.0.1"
-    "@lit-protocol/contracts-sdk" "^3.2.1"
+    "@lit-protocol/contracts-sdk" "^4.1.1"
     cid multiformats/cid
     did-session "^3.1.0"
     ethers "^6.11.1"
@@ -1330,40 +1330,40 @@
     multiformats "^11.0.0"
     uint8arrays "^4.0.2"
 
-"@lit-protocol/accs-schemas@0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@lit-protocol/accs-schemas/-/accs-schemas-0.0.6.tgz#a2dd4677bdfe33fd1a45b8f6919d1eff92633012"
-  integrity sha512-/NIZkAN+kgAarWefBX1a4DiNerUtv8JOdQmqUo45cnlDp89X9HkiK+8gm9z2p9gojtvxMqqId7wW8J8NHXVRDg==
+"@lit-protocol/accs-schemas@0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@lit-protocol/accs-schemas/-/accs-schemas-0.0.7.tgz#aad45c27f8c1dc0363a08771bdab50b595dc34d7"
+  integrity sha512-n8fJ6NMh2T3KgSKe0CRB0Uam6ZwxUTQV0oQXY0vEmSL+Q2a1PsM2FX42szOM+O7LgY+Bko7AiCjjDHbqQoJydg==
   dependencies:
     ajv "^8.12.0"
 
-"@lit-protocol/auth-helpers@3.2.6":
-  version "3.2.6"
-  resolved "https://registry.yarnpkg.com/@lit-protocol/auth-helpers/-/auth-helpers-3.2.6.tgz#b16690605187c8413ce1db659eae0b84fb29135f"
-  integrity sha512-pWEcnXI8MNAEPMtSO6D2A8cLphaXg7QLDjrxtst/V4p51U86IReCAhgwdqt6uUGOikJeRt8Q9OZHN9m4A1PDxQ==
+"@lit-protocol/auth-helpers@4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@lit-protocol/auth-helpers/-/auth-helpers-4.2.0.tgz#1c6bf0f691208ff3bed2db9f8dfa518e708251f3"
+  integrity sha512-dKgBBWwsoFzbVfxOJAI4Nf1mZ4kE7sZ+ynzrXqfpIF7KRejjv43At7nJbZU+BdaqrJb7F7H3CvbL7y5WWEVJWg==
   dependencies:
     siwe "^2.0.5"
     siwe-recap "0.0.2-alpha.0"
 
-"@lit-protocol/constants@3.2.6":
-  version "3.2.6"
-  resolved "https://registry.yarnpkg.com/@lit-protocol/constants/-/constants-3.2.6.tgz#308501ba1f5fa73d9aa574514ed84ca6a1536c14"
-  integrity sha512-HkmRPgeWs8tZWGCKiqyvC7mpBYYLoaehYbmoE6hL3248Btze3t38fd/5SctEddIOSDz++11bhd1TEVG67Lng3A==
+"@lit-protocol/constants@4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@lit-protocol/constants/-/constants-4.2.0.tgz#d007f5efd32f6086af2976517fc369d806a6e554"
+  integrity sha512-AA2jO4nZwInPcMOztsHWSZe2heY3oxRchy98AhP3T0vcH5qCLwWZjr3P84EVWRu8rYqH6HXTHZCEr+CMo7hmGg==
   dependencies:
     "@ethersproject/abstract-provider" "5.7.0"
-    "@lit-protocol/accs-schemas" "0.0.6"
-    "@lit-protocol/auth-helpers" "3.2.6"
-    "@lit-protocol/types" "3.2.6"
+    "@lit-protocol/accs-schemas" "0.0.7"
+    "@lit-protocol/auth-helpers" "4.2.0"
+    "@lit-protocol/types" "4.2.0"
     ethers "^5.7.1"
     jszip "^3.10.1"
     siwe "^2.0.5"
     siwe-recap "0.0.2-alpha.0"
     tslib "^2.3.0"
 
-"@lit-protocol/contracts-sdk@^3.2.1":
-  version "3.2.6"
-  resolved "https://registry.yarnpkg.com/@lit-protocol/contracts-sdk/-/contracts-sdk-3.2.6.tgz#8ca0a8dad746a50af824f4390f9e412424abce8c"
-  integrity sha512-AgcJGI6duPe6ITeDvhkuURGdm4hvOe+b/wWTDY7REjwfxLg1GreNyMvXDKtp3ihytrTV65NrGS5Dofd3IOP55A==
+"@lit-protocol/contracts-sdk@^4.1.1":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@lit-protocol/contracts-sdk/-/contracts-sdk-4.2.0.tgz#d865e2096b7b0e5123ce0e06d5c422c8e2b91a30"
+  integrity sha512-SeQ1hJSM+yduBBNcsP7R4Qf7aD2E8jkWp1G6WtINCtE77MT0J62PeeHG9cUJ08A7kEEtRLzDrnbCu3ur+RqajQ==
   dependencies:
     "@cosmjs/amino" "0.30.1"
     "@cosmjs/crypto" "0.30.1"
@@ -1372,12 +1372,12 @@
     "@ethersproject/abstract-provider" "5.7.0"
     "@ethersproject/contracts" "5.7.0"
     "@ethersproject/providers" "5.7.2"
-    "@lit-protocol/accs-schemas" "0.0.6"
-    "@lit-protocol/auth-helpers" "3.2.6"
-    "@lit-protocol/constants" "3.2.6"
-    "@lit-protocol/logger" "3.2.6"
-    "@lit-protocol/misc" "3.2.6"
-    "@lit-protocol/types" "3.2.6"
+    "@lit-protocol/accs-schemas" "0.0.7"
+    "@lit-protocol/auth-helpers" "4.2.0"
+    "@lit-protocol/constants" "4.2.0"
+    "@lit-protocol/logger" "4.2.0"
+    "@lit-protocol/misc" "4.2.0"
+    "@lit-protocol/types" "4.2.0"
     ajv "^8.12.0"
     bitcoinjs-lib "^6.1.0"
     ethers "^5.7.1"
@@ -1391,16 +1391,16 @@
     uint8arrays "^4.0.3"
     util "0.12.5"
 
-"@lit-protocol/logger@3.2.6":
-  version "3.2.6"
-  resolved "https://registry.yarnpkg.com/@lit-protocol/logger/-/logger-3.2.6.tgz#1c6ecc55a7e06d331e66ecd321bae6217c4b193b"
-  integrity sha512-c2Z4o+ymdqlRDdow5bDlQUnjRZ98DYA/duMPMzx064Q5+/ITy0r/musiR/KPMZqyOQDsXojPSNv9kL8ilYPmiQ==
+"@lit-protocol/logger@4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@lit-protocol/logger/-/logger-4.2.0.tgz#470024b40567274fe54af93136864b234958cd33"
+  integrity sha512-bZj5/JehCLrkmewx7k4phGi3bSWFBxGX0gEwOpsMc9gv5xUTejg4nFbgDmc8qu8FYyCZ0RF/s1eaSY4xP0xo9g==
   dependencies:
     "@ethersproject/abstract-provider" "5.7.0"
-    "@lit-protocol/accs-schemas" "0.0.6"
-    "@lit-protocol/auth-helpers" "3.2.6"
-    "@lit-protocol/constants" "3.2.6"
-    "@lit-protocol/types" "3.2.6"
+    "@lit-protocol/accs-schemas" "0.0.7"
+    "@lit-protocol/auth-helpers" "4.2.0"
+    "@lit-protocol/constants" "4.2.0"
+    "@lit-protocol/types" "4.2.0"
     ethers "^5.7.1"
     jszip "^3.10.1"
     punycode "2.3.1"
@@ -1409,19 +1409,19 @@
     tslib "^2.3.0"
     uint8arrays "^4.0.3"
 
-"@lit-protocol/misc@3.2.6":
-  version "3.2.6"
-  resolved "https://registry.yarnpkg.com/@lit-protocol/misc/-/misc-3.2.6.tgz#a14c21930731430bef38a61155839c104396127c"
-  integrity sha512-XTSx2dKauTJI3YCLN+1NvE5wbbPwBn6CuMkcUoxSIRnOe+QBVRXW/6nf+tSjKb4Hr0M7nh7X8KecAH38Gt0NZg==
+"@lit-protocol/misc@4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@lit-protocol/misc/-/misc-4.2.0.tgz#155c56bdac356fc75712e5d703cd7b932a138170"
+  integrity sha512-XWXsqgtLfeXYW2RZYkk4uj5JqoKjVAnvlhM5wL0jpvhwyX8qmFLhHinQ9WxHRf5PTzcDlAuVr6iqALZdTCWyfg==
   dependencies:
     "@ethersproject/abstract-provider" "5.7.0"
     "@ethersproject/contracts" "5.7.0"
     "@ethersproject/providers" "5.7.2"
-    "@lit-protocol/accs-schemas" "0.0.6"
-    "@lit-protocol/auth-helpers" "3.2.6"
-    "@lit-protocol/constants" "3.2.6"
-    "@lit-protocol/logger" "3.2.6"
-    "@lit-protocol/types" "3.2.6"
+    "@lit-protocol/accs-schemas" "0.0.7"
+    "@lit-protocol/auth-helpers" "4.2.0"
+    "@lit-protocol/constants" "4.2.0"
+    "@lit-protocol/logger" "4.2.0"
+    "@lit-protocol/types" "4.2.0"
     ajv "^8.12.0"
     ethers "^5.7.1"
     jszip "^3.10.1"
@@ -1432,14 +1432,14 @@
     uint8arrays "^4.0.3"
     util "0.12.5"
 
-"@lit-protocol/types@3.2.6":
-  version "3.2.6"
-  resolved "https://registry.yarnpkg.com/@lit-protocol/types/-/types-3.2.6.tgz#a175fd7582c8cc52d57cc62b4de76bcba6921551"
-  integrity sha512-wUh25p37/dfxsG0AJ6qiAmCLN2ShEjLwFfmLA+7bLPgzPwBvI/fHXhV0qW26litcC5Yggg12oMGPomFBsDVtQA==
+"@lit-protocol/types@4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@lit-protocol/types/-/types-4.2.0.tgz#ba377207a39ac12f4d78b20c2f7b1db2459343f7"
+  integrity sha512-9lRXsV9A377RBsvqUUE5a0ajV8UxBJ6nijT3zaGOd+Kkp8l6x72hkIdkxUP6GwIiocIgAglVssAuhlXYIDTFPQ==
   dependencies:
     "@ethersproject/abstract-provider" "5.7.0"
-    "@lit-protocol/accs-schemas" "0.0.6"
-    "@lit-protocol/auth-helpers" "3.2.6"
+    "@lit-protocol/accs-schemas" "0.0.7"
+    "@lit-protocol/auth-helpers" "4.2.0"
     ethers "^5.7.1"
     jszip "^3.10.1"
     siwe "^2.0.5"
@@ -2174,11 +2174,6 @@ abstract-leveldown@~6.2.1:
     level-supports "~1.0.0"
     xtend "~4.0.0"
 
-add@^2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/add/-/add-2.0.6.tgz#248f0a9f6e5a528ef2295dbeec30532130ae2235"
-  integrity sha512-j5QzrmsokwWWp6kUcJQySpbG+xfOBqqKnup3OIk1pz+kB/80SLorZ9V8zHFLO92Lcd+hbvq8bT+zOGoPkmBV0Q==
-
 aes-js@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/aes-js/-/aes-js-3.0.0.tgz#e21df10ad6c2053295bcbb8dab40b09dbea87e4d"
@@ -2637,7 +2632,7 @@ chownr@^2.0.0:
   resolved "https://registry.yarnpkg.com/chownr/-/chownr-2.0.0.tgz#15bfbe53d2eab4cf70f18a8cd68ebe5b3cb1dece"
   integrity sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==
 
-cid@multiformats/cid:
+"cid@github:multiformats/cid":
   version "0.0.0"
   resolved "https://codeload.github.com/multiformats/cid/tar.gz/603f4570ba051192224dd1a3b131a6ebdd486b4f"
 
