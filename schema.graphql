@@ -1,0 +1,88 @@
+type Technology {
+  uid: String! @string(maxLength: 100)
+  title: String! @string(maxLength: 100)
+  createdAt: DateTime! 
+  updatedAt: DateTime! 
+}
+
+type IndustryTag {
+  uid: String! @string(maxLength: 100)
+  title: String! @string(maxLength: 100)
+  definition: String @string(maxLength: 1000)
+  airtableRecId: String @string(maxLength: 100)
+  createdAt: DateTime! 
+  updatedAt: DateTime! 
+  industryCategoryUid: String @string(maxLength: 100)
+}
+
+type MembershipSource {
+  uid: String! @string(maxLength: 100)
+  title: String! @string(maxLength: 100)
+  createdAt: DateTime! 
+  updatedAt: DateTime! 
+}
+
+type Skill {
+  title: String! @string(maxLength: 50)
+}
+
+
+type ProjectContribution  {
+  uid: String! @string(maxLength: 100)
+  role: String! @string(maxLength: 100)
+  description: String @string(maxLength: 5000)
+  currentProject: Boolean! 
+  startDate: DateTime
+  endDate: DateTime
+  memberUid: String! @string(maxLength: 100)
+  projectUid: String! @string(maxLength: 100)
+}
+
+
+type TeamRole {
+  uid: String! @string(maxLength: 100)
+  name: String! @string(maxLength: 100)
+  role: String @string(maxLength: 100)
+  teamLead: Boolean! 
+  mainTeam: Boolean! 
+}
+
+
+type Member {
+  memberId: String! @string(maxLength: 100)
+  name: String! @string(maxLength: 100)
+  image: String @string(maxLength: 300)
+  githubHandle: String @string(maxLength: 100)
+  discordHandle: String @string(maxLength: 100)
+  telegramHandle: String @string(maxLength: 100)
+  twitter: String @string(maxLength: 100)
+  officeHours: String @string(maxLength: 100)
+  location: String @string(maxLength: 100)
+  skills: [Skill!] @list(maxLength: 30)
+  teamLead: Boolean! 
+  projectContributions: [ProjectContribution!]! @list(maxLength: 30)
+  teams: [TeamRole!] @list(maxLength: 30)
+  mainTeam: TeamRole
+  openToWork: Boolean! 
+  linkedinHandle: String @string(maxLength: 300)
+  repositories: [String!] @string(maxLength: 100) @list(maxLength: 30)
+  preferences: String @string(maxLength: 500)
+}
+
+
+type Team @createModel(accountRelation: LIST, description: "Represents teams within the Protocol Labs ecosystem"){
+  teamId: String! @string(maxLength: 100)
+  name: String! @string(maxLength: 100)
+  logo:  String @string(maxLength: 300)
+  website: String @string(maxLength: 300)
+  twitter: String @string(maxLength: 100)
+  shortDescription: String @string(maxLength: 5000)
+  longDescription: String @string(maxLength: 10000)
+  technologies: [Technology!] @list(maxLength: 30)
+  fundingStage: String @string(maxLength: 50)
+  industryTags: [IndustryTag!] @list(maxLength: 30)
+  membershipSources: [MembershipSource!] @list(maxLength: 30)
+  members: [Member!] @list(maxLength: 1000)
+  contactMethod: String @string(maxLength: 300)
+  linkedinHandle: String @string(maxLength: 300)
+}

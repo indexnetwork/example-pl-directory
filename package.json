@@ -1,0 +1,22 @@
+{
+  "name": "Indexnetwork-pl-directory",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "import": "node index.js"
+  },
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "@composedb/client": "^0.7.1",
+    "@didtools/cacao": "^3.0.1",
+    "@ethersproject/address": "^5.7.0",
+    "@ethersproject/wallet": "^5.7.0",
+    "@indexnetwork/sdk": "^0.0.3",
+    "@stablelib/random": "^1.0.2",
+    "did-session": "^3.1.0",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.11.1",
+    "yarn": "^1.22.22"
+  }
+}
