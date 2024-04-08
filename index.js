@@ -65,19 +65,21 @@ const go = async () => {
     console.log('Adding teams to index...');
     for (const t of createdTeams) {
       try {
-        await indexClient.addIndexItem(indexId, t);
+        await indexClient.addItemToIndex(indexId, t);
         console.log(`Team added to index: ${t.id}`);
       } catch (err) {
         console.error('Error adding team to index:', err);
       }
     }
 
+    /* Uncomment this block if you want to query the index
     console.log('Querying index...');
     const queryResponse = await indexClient.query({
       query: "Which team is building a decentralized semantic index?",
       indexes: [indexId],
     });
     console.log('Query response:', queryResponse);
+    */
 
   } catch (error) {
     console.error('Exception in process:', error);
