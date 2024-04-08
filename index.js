@@ -42,8 +42,8 @@ const go = async () => {
     console.log('Index client authenticated.');
 
     console.log('Creating index...');
-    const indexId = await indexClient.createIndex("PL Ecosystem Teams");
-    console.log(`Index created with ID: ${indexId}`);
+    const index = await indexClient.createIndex("PL Ecosystem Teams");
+    console.log(`Index created with ID: ${index.id}`);
 
     console.log('Loading teams...');
     const teams = await loadTeams(); // This function needs to be defined elsewhere
@@ -65,8 +65,9 @@ const go = async () => {
     console.log('Adding teams to index...');
     for (const t of createdTeams) {
       try {
-        await indexClient.addItemToIndex(indexId, t);
-        console.log(`Team added to index: ${t.id}`);
+        console.log(index.id, t, "seref")
+        await indexClient.addItemToIndex(index.id, t);
+        console.log(`Team added to index: ${t}`);
       } catch (err) {
         console.error('Error adding team to index:', err);
       }
